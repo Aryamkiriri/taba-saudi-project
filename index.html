@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عزنا بطبعنا — اكتشف طبعك السعودي</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- تنبيه النوافذ المنبثقة (اختياري — أزله إذا ما أردت) -->
+        <div class="popup-warning">
+            ⚠️ تأكد من السماح للنوافذ المنبثقة إن وُجدت — لتجربة كاملة!
+        </div>
+
+        <!-- العنوان الرئيسي -->
+        <header class="main-header">
+            <h1>🇸🇦 عزنا بطبعنا 🇸🇦</h1>
+            <p>اكتشف طبعك السعودي الأصيل — وأفتخر به!</p>
+        </header>
+
+        <!-- نموذج الإدخال -->
+        <section class="input-section">
+            <input type="text" id="nameInput" placeholder="👤 اكتب اسمك" autocomplete="off">
+            <select id="cityInput">
+                <option value="">🏙️ اختر مدينتك</option>
+                <option value="الرياض">الرياض</option>
+                <option value="جدة">جدة</option>
+                <option value="الطائف">الطائف</option>
+                <option value="الدمام">الدمام</option>
+                <option value="مكة">مكة</option>
+                <option value="المدينة">المدينة</option>
+                <option value="القصيم">القصيم</option>
+                <option value="تبوك">تبوك</option>
+                <option value="جازان">جازان</option>
+                <option value="نجران">نجران</option>
+                <option value="حائل">حائل</option>
+                <option value="الباحة">الباحة</option>
+                <option value="الجوف">الجوف</option>
+            </select>
+            <button id="discoverBtn">🌟 اكتشف طبعك الآن!</button>
+        </section>
+
+        <!-- منطقة النتيجة -->
+        <section id="resultSection" class="result-section hidden">
+            <div id="resultBox" class="result-box">
+                <!-- سيتم ملؤه بالجافاسكريبت -->
+            </div>
+            <div class="bonus-message" id="bonusMessage"></div>
+        </section>
+
+        <!-- قسم المشاركة -->
+        <section class="share-section">
+            <h3>📣 شارك طبعك مع <strong>#عزنا_بطبعنا</strong> — وخلي الكل يفتخر بطبعه!</h3>
+        </section>
+
+        <!-- قسم المصمم والمعرف -->
+        <footer class="footer">
+            <p><strong>🎨 الطالبة  :</strong> اريام حسن سراج كريري  &nbsp;&nbsp; | &nbsp;&nbsp; <strong>🆔 ID :</strong>202500229</p>
+            <p>مشروع مقدم لمسابقة اليوم الوطني — شعار: عزنا بطبعنا 🇸🇦</p>
+        </footer>
+    </div>
+
+    <!-- الصوت الخلفي -->
+    <audio id="bgAudio" src="audio.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

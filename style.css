@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: url('background.jpg') center/cover fixed;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(0, 108, 53, 0.3);
+}
+
+.popup-warning {
+    text-align: center;
+    background: #FFF3E0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #E65100;
+    font-weight: bold;
+    font-size: 0.95em;
+    display: none; /* ✅ أخفيته لأننا أزلنا Bing — يمكنك حذف هذا القسم كاملًا إذا أردت */
+}
+
+.main-header {
+    text-align: center;
+    padding: 30px 0;
+    background: rgba(0, 108, 53, 0.85);
+    color: white;
+    margin: -30px -30px 30px -30px;
+    border-radius: 20px 20px 0 0;
+    animation: titlePulse 3s infinite;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.main-header h1 {
+    font-family: 'Amiri', serif;
+    font-size: 2.8em;
+    margin: 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-header p {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+.input-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#nameInput, #cityInput {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #006C35;
+    border-radius: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#nameInput:focus, #cityInput:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 108, 53, 0.3);
+}
+
+#discoverBtn {
+    background: linear-gradient(135deg, #006C35, #004d26);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 0 6px 20px rgba(0, 108, 53, 0.4);
+    transition: all 0.3s ease;
+}
+
+#discoverBtn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 108, 53, 0.6);
+}
+
+.result-section {
+    margin: 40px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.result-box {
+    background: #E8F5E9;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border: 4px solid #006C35;
+    margin: 0 auto;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s forwards;
+    transition: all 0.3s ease;
+}
+
+.result-box:hover {
+    transform: scale(1.02) translateY(0);
+}
+
+.result-box h2 {
+    font-family: 'Amiri', serif;
+    font-size: 2.5em;
+    margin: 0 0 20px 0;
+    animation: pulse 2s infinite;
+}
+
+.result-box .user-info {
+    font-size: 1.5em;
+    margin: 25px 0;
+}
+
+.result-box .description {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px auto;
+    max-width: 90%;
+    font-size: 1.3em;
+    line-height: 1.7;
+}
+
+.cultural-section {
+    margin: 30px 0;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+}
+
+.cultural-section h3 {
+    margin-bottom: 15px;
+    font-family: 'Amiri', serif;
+}
+
+.bonus-message {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #D32F2F;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 243, 224, 0.8);
+    border-radius: 15px;
+    display: none;
+}
+
+.share-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+    border: 3px dashed #006C35;
+    transition: all 0.3s ease;
+}
+
+.share-section:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: scale(1.02);
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes titlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .main-header h1 {
+        font-size: 2.2em;
+    }
+
+    .result-box {
+        padding: 25px;
+    }
+
+    .result-box h2 {
+        font-size: 2em;
+    }
+}
